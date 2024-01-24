@@ -9,6 +9,9 @@ test('has title', async ({ page }) => {
   const frame1 = await page.frameLocator('[src="frame_1.html"]');
   await frame1.locator('[name="mytext1"]').fill('iframe number one');
 
+  // frame 2 
+  const frame2 = await page.frameLocator('[src="frame_2.html"]');
+  await frame2.locator('[name="mytext1"]').fill('iframe number Two');
 
 
 });
