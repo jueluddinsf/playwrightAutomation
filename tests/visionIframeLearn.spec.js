@@ -1,17 +1,17 @@
-// @ts-check
 const { test, expect } = require('@playwright/test');
+const VisionPage = require('../pageObjects/actions/visionPage')
 
-test('has title', async ({ page }) => {
-  await page.goto('https://ui.vision/demo/webtest/frames/');
+test('learning iframe via ui vision application', async ({ page }) => {
+  const visionObject = new VisionPage(page);
+  visionObject.visitVisionPage();
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Frames - Web Automation Test/);
-  const frame1 = await page.frameLocator('[src="frame_1.html"]');
-  await frame1.locator('[name="mytext1"]').fill('iframe number one');
+  visionObject.verifyPageTitle();
+  
+  visionObject.addTextToFrame1();
 
   // frame 2 
-  const frame2 = await page.frameLocator('[src="frame_2.html"]');
-  await frame2.locator('[name="mytext1"]').fill('iframe number Two');
+  visionObject.addTextToFrame2();
 
 
 });
