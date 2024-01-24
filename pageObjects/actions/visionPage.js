@@ -20,13 +20,13 @@ class VisionPage {
 
     async addTextToFrame1() {
         const frame1 = await this.page.frameLocator(visionLocators.frame1);
-        await frame1.locator(visionLocators.textField).fill('iframe number one');
+        await frame1.locator(visionLocators.textField1).fill('iframe number one');
     }
 
     async addTextToFrame2() {
         // frame 2 
         const frame2 = await this.page.frameLocator(visionLocators.frame2);
-        await frame2.locator(visionLocators.textField).fill('iframe number Two');
+        await frame2.locator(visionLocators.textField2).fill('iframe number Two');
     }
 
 
