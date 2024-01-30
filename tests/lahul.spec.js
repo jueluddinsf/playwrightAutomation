@@ -38,6 +38,27 @@ test('verify user able to click icc ranking tab and ranking faqs)', async ({ pag
       await expect(page.locator('#main')).toContainText('ViratKohli1Wickets1377Runs12Catches');
       await page.getByText('ViratKohli1Wickets1377Runs12Catches').first().click();
       await page.getByRole('link', { name: 'Header Logo' }).click();
+
+
+
+
+      test('verfiy user is able to navigae sing up page and perform signIn process ', async ({ page }) => {
+        await page.goto('https://www.icc-cricket.com/');
+        await page.getByLabel('Sign in').click();
+        await expect(page.getByLabel('Log in or Create Your Account').getByRole('heading')).toContainText('Log in or Create Your Account');
+        await page.getByPlaceholder('Email Address').click();
+        await page.getByPlaceholder('Password').click();
+        await expect(page.getByLabel('Keep me logged in')).toBeVisible();
+        await expect(page.getByLabel('Sign in with your social').getByRole('heading')).toContainText('Sign in with your social account');
+        await expect(page.getByRole('paragraph')).toContainText('Don\'t have an account? Sign up today for exclusive content, early access to tickets and other membership rewardsSign Up');
+        await page.goto('https://accounts.icc-cricket.com/4ba9f276-2497-440e-a6ba-d05d4831b967/b2c_1a_signinsignup/oauth2/v2.0/logout?post_logout_redirect_uri=https%3A%2F%2Fwww.icc-cricket.com%2F&client-request-id=a60f6a5b-624a-46ec-98ef-04fea9e04ca9');
+        await page.goto('https://www.icc-cricket.com/');
+
+        // Test in Progress
+        // Pushing the changes into the new branch
+        //
+
+
     });
 
     
