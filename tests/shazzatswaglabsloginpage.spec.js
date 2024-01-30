@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-
+//add new test
 test('verify user should be able to login to swahlabs page', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/v1/index.html');
   await expect(page.getByRole('img')).toBeVisible();
