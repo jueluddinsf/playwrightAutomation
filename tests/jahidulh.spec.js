@@ -7,4 +7,4 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('Product Search').fill('fish');
   await page.getByPlaceholder('Product Search').press('Enter');
   await expect(page.getByRole('rowgroup')).toContainText('Angelfish');
-  await page.getByRole('link', { name: 'FI-SW-' }).click()};
+  await page.getByRole('link', { name: 'FI-SW-' }).click() });
