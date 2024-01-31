@@ -7,7 +7,7 @@ const HomepageActions = require('../pageObjects/actions/tdHomepage')
 let loginPageActions;
 let homepageActions
 
-test('Verify user able to click on LinkedIn page', async ({ page }) => {
+test('Verify user able to click on X page', async ({ page }) => {
 
     // Creating instances of page action classes
     loginPageActions = new LoginPageActions(page);
@@ -23,7 +23,6 @@ test('Verify user able to click on LinkedIn page', async ({ page }) => {
     await homepageActions.validateHomeBackpack();
     await homepageActions.validateHomeBikeLight();
     // Validating the visibility of the LinkedIn icon/link
-    await homepageActions.validateLinkedInVisible();
-
+    await homepageActions.validateXVisible();
 
 });
