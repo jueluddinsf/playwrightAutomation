@@ -19,9 +19,9 @@ test('Verify links on a  Infosys web page', async ({ page }) => {
     console.log(links.lenght);
     for (const link of links) {
         if (link && link.includes('http')) {
-            const res = page.goto(link);
-            if (res) {
-                console.log(`${link} worked and the status is ${res.status()}`);
+            const response = page.goto(link);
+            if (response) {
+                console.log(`${link} worked and the status is ${response.status()}`);
 
             }
             else {
