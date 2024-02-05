@@ -1,7 +1,7 @@
 import { test, expect, request } from '@playwright/test';
 //const {test, expect} = require('@playwright/test');
 
-test('Veryfy links on a  HR page', async ({ page }) => {
+test('Verify links on a  Infosys web page', async ({ page }) => {
     await page.goto('https://www.infosys.com/');
     await page.locator('.navbar-brand').waitFor(30000);
     const linkElements = await page.$$('a');
@@ -25,7 +25,7 @@ test('Veryfy links on a  HR page', async ({ page }) => {
 
             }
             else {
-                console.log(`${link} did not work or retuen 200`);
+                console.log(`${link} did not work or return 200`);
 
             }
             await page.waitForTimeout(1000);
