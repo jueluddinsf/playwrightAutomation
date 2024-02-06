@@ -2,6 +2,7 @@ const{Page} = require('@playwright/test');
 const googleLocator = require('../locators/googlePage');
 
 class GoogleSearchPage {
+
     constructor(page) {
         this.page = page;
     } 
@@ -10,14 +11,14 @@ class GoogleSearchPage {
            await this.page.goto(url);
         }
 
-       /*async searchKeyWords(keyword) {
-            const searchBox = await this.page.locator(googleLocator.searchBoxLocator);
+       async searchKeyWords(keyword) {
+            let searchBox = await this.page.locator(googleLocator.searchBoxLocator);
             await searchBox.waitFor();
             await searchBox.fill(keyword);
-            await this.page.keyboard.press('Enter');*/
+            await this.page.keyboard.press('Enter');
         }
 
 
 
-
+    }
 module.exports = GoogleSearchPage

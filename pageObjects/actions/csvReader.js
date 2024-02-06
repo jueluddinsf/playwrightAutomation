@@ -1,13 +1,14 @@
 const fs = require('fs');
 const csv = require('csv-parse');
-const csvHelper=require('../actions/GoogleSearchPage')
+const csvReader=require('./GoogleSearchPage')
 
-class csvHelper {
+class CsvReader {
 
-    readKeyWords(filePath) {
+   async readKeyWords(filePath) {
         return new Promise((resolve, reject) => {
             let keywords = [];
-            fs.createReadStream(filePath).pipe(csv())
+            fs.createReadStream(filePath)
+                .pipe(csv())
                 .on('data', (data) => keywords.push(data.keyword))
                 .on('end', () => { resolve(keywords)
                 });
@@ -18,4 +19,4 @@ class csvHelper {
 
 
 }   
-module.exports = csvHelper
+module.exports = CsvReader
