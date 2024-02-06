@@ -11,7 +11,7 @@ let csvReader;
 test('Google test', async ({ page }) => {
     googleSearchPage = new GoogleSearchPage(page);
     csvReader = new CsvReader();
-    ;keywords = await csvReader.readKeyWords('../testData/keywords.csv')
+    keywords = await csvReader.readKeyWords('../testData/keywords.csv')
 
 
     
