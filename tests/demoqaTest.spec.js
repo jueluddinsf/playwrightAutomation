@@ -30,7 +30,7 @@ test('Verify browser windows, alerts, frames, nested frames and modal diologs', 
     await demoqaPage.verifyOnModelDialogsPage ();
     await demoqaPage.verifyOnModelDialogs();
     await demoqaPage.clickOnLargeModalButton();
-    await demoqaPage.verifyLargeModal();
+    await demoqaPage.verifyOnLargeModal();
     
     
 
