@@ -20,8 +20,8 @@ test.describe('Interaction with Web Page Dialogs', () => {
     });
         test('Verify large Model can be clicked  ', async ({ page }) => {
             await page.on('dialog', async dialog => {
-                const modal = await page.locator('#showLargeModal');
-                await modal.click();
+                const modal1 = await page.locator('#showLargeModal');
+                await modal1.click();
                 await expect(page.locator('.modal-body')).toHaveText('Lorem Ipsum is simply dummy text of the printing and typesetting industry.');
                 await page.locator('#closeLargeModal').click();
 
