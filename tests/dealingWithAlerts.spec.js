@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('Interaction with Alerts test case', () => {
+test.describe('Interaction with Alerts', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto('https://demoqa.com/alerts');
         await expect(page).toHaveTitle(/DEMOQA/);
